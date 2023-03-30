@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import {Button, Text, TextInput, View} from 'react-native';
 import CampoInteiro from "../../../componentes/campointeiro";
-import estilos from "./estilos";
 
 export default function Item({nome, preco, descricao}){
     const [quantidade, setQuantidade] = useState(1)
@@ -15,7 +14,7 @@ export default function Item({nome, preco, descricao}){
         <View>
             <View style={estilos.valor}>
                 <Text style={estilos.descricao}>quantidade:</Text>
-                <CampoInteiro valor={quantidade} acao={setQuantidade}/>
+                <CampoInteiro estilos={estilos.quantidade} valor={quantidade} acao={setQuantidade}/>
             </View>
             <View style={estilos.valor}>
                 <Text style={estilos.descricao}>Preço:</Text>
